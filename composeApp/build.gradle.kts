@@ -1,3 +1,4 @@
+import org.gradle.kotlin.dsl.implementation
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
@@ -29,6 +30,8 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+            // Koin
+            implementation(libs.androidx.koin)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -46,6 +49,7 @@ kotlin {
 
             //Gemini
             implementation("dev.shreyaspatil.generativeai:generativeai-google:0.9.0-1.1.0")
+
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

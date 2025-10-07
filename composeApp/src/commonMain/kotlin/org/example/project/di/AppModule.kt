@@ -13,11 +13,11 @@ val AppModule = module {
     single <GenerativeModel>{
         GenerativeModel(
             modelName = "gemini-2.0-flash",
-            apiKey = "AIzaSyC_DX7kW1p9GmFUge8z_D1tu8lBw2xXCEM"
+            //TODO
+            apiKey = "Api_Key"
         )
     }
     singleOf(::GeminiApiService)
     single<GeminiApiRepo>{ GeminiRepoImpl(get())}
     singleOf(::ChatWithGeminiUseCase)
-    singleOf(::GeminiApiViewModel)
 }

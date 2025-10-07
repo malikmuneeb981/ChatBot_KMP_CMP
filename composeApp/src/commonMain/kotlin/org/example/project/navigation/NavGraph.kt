@@ -14,7 +14,9 @@ fun NavGraph(){
     NavHost(navController = navController, startDestination = Routes.ChatBotScreen){
         composable(Routes.ChatBotScreen) {
             val geminiApiViewModel = koinInject<GeminiApiViewModel>()
-            ChatBotScreen(geminiApiViewModel)
+            ChatBotScreen(
+                geminiApiViewModel
+            )
         }
     }
 }
